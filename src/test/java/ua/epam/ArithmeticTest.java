@@ -46,9 +46,14 @@ public class ArithmeticTest {
         Assert.assertEquals(2.0, res, 0);
     }
 
-    @Test (expected = Exception.class)
+    @Test (expected = ArithmeticException.class)
     public void testDivException() {
         a.div(10.0, 0.0);
+    }
+
+    @Test(timeout = 1000)
+    public void testN(){
+        while (true);
     }
 
 }
