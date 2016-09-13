@@ -44,11 +44,11 @@ public class ArithmeticTest {
     public void testDiv() throws Exception {
         double res = a.div(10, 5);
         Assert.assertEquals(2.0, res, 0);
+    }
 
-        try {
-            a.div(10, 0);
-            Assert.fail();
-        } catch (Exception e) {}
+    @Test (expected = Exception.class)
+    public void testDivException() {
+        a.div(10.0, 0.0);
     }
 
 }
