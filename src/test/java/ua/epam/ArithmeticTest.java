@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import static org.junit.Assert.*;
 
@@ -43,6 +44,11 @@ public class ArithmeticTest {
     public void testDiv() throws Exception {
         double res = a.div(10, 5);
         Assert.assertEquals(2.0, res, 0);
+
+        try {
+            a.div(10, 0);
+            Assert.fail();
+        } catch (Exception e) {}
     }
 
 }
