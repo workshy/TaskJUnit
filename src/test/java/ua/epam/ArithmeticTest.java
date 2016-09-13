@@ -13,28 +13,28 @@ public class ArithmeticTest {
     public void testAdd() throws Exception {
         Arithmetic a = new Arithmetic();
         double res = a.add(3, 7);
-        if ( res != 10 ) Assert.fail();
+        Assert.assertEquals(10, res, 0);
     }
 
     @Test
     public void testMult() throws Exception {
         Arithmetic a = new Arithmetic();
         double res = a.mult(3, 7);
-        if ( res != 21 ) Assert.fail();
+        Assert.assertEquals(21, res, 0);
     }
 
     @Test
     public void testDeduct() throws Exception {
         Arithmetic a = new Arithmetic();
         double res = a.deduct(3, 7);
-        if ( res != -4 ) Assert.fail();
+        Assert.assertEquals(-4, res, 0);
     }
 
     @Test
     public void testDiv() throws Exception {
         Arithmetic a = new Arithmetic();
         double res = a.div(10, 5);
-        if ( res != 2.0 ) Assert.fail();
+        Assert.assertEquals(2.0, res, 0);
     }
 
 }
