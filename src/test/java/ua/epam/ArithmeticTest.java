@@ -2,6 +2,7 @@ package ua.epam;
 
 import org.junit.Assert;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -16,6 +17,9 @@ public class ArithmeticTest {
     public static void runT() {
         a = new Arithmetic();
     }
+
+    /*@AfterClass*/
+
     @Test
     public void testAdd() throws Exception {
         double res = a.add(3, 7);
@@ -28,6 +32,7 @@ public class ArithmeticTest {
         Assert.assertEquals(21, res, 0);
     }
 
+    @Ignore
     @Test
     public void testDeduct() throws Exception {
         double res = a.deduct(3, 7);
